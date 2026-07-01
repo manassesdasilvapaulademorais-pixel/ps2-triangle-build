@@ -6,7 +6,10 @@ jobs:
     container: ps2dev/ps2dev
     steps:
       - uses: actions/checkout@v4
-      - run: make
+      - name: Install build tools
+        run: apt-get update && apt-get install -y make
+      - name: Build
+        run: make
       - uses: actions/upload-artifact@v4
         with:
           name: triangle-elf
