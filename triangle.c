@@ -1,6 +1,7 @@
 #include <kernel.h>
 #include <graph.h>
 #include <draw.h>
+#include <gs_psm.h>
 #include <dma.h>
 #define GS_REG_PRIM   0x00
 #define GS_REG_RGBAQ  0x01
