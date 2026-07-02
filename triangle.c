@@ -1,5 +1,6 @@
 #include <kernel.h>
 #include <graph.h>
+#include <draw.h>
 #include <dma.h>
 #define GS_REG_PRIM   0x00
 #define GS_REG_RGBAQ  0x01
@@ -13,7 +14,6 @@ static inline void set_qword(qword_t *q, u64 lo, u64 hi) {
     q->dw[1] = hi;
 }
 int main(void) {
-    graph_mode_t gmode;
     framebuffer_t fb;
     qword_t *q = packet;
     graph_shutdown();
